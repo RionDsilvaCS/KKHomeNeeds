@@ -2,6 +2,7 @@ package com.example.kkhomeneeds;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Looper;
 import android.view.animation.Animation;
@@ -34,6 +35,9 @@ public class splashActivity extends AppCompatActivity {
                 eclippse1.startAnimation(bounce);
             }
         }, 1000);
+
+        Intent secondActivityIntent = new Intent(this, MainActivity.class);
+        startActivity(secondActivityIntent);
 
 
 

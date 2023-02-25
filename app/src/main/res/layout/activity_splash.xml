@@ -14,37 +14,58 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="313dp"
-        android:layout_marginEnd="83dp"
-        android:layout_marginBottom="316dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="524dp"
         app:srcCompat="@drawable/splash_logo" />
 
-    <ImageView
-        android:id="@+id/upe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="286dp"
-        android:layout_marginTop="-5dp"
-        android:layout_marginEnd="-2dp"
-        android:layout_marginBottom="610dp"
-        app:srcCompat="@drawable/ellipse_1" />
+        android:background="@drawable/slide_up_box_splash"
+        >
 
-    <ImageView
-        android:id="@+id/downe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-6dp"
-        android:layout_marginTop="530dp"
-        android:layout_marginEnd="225dp"
-        android:layout_marginBottom="-5dp"
-        app:srcCompat="@drawable/ellipse_2" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Welcome"
+            android:textSize="34dp"
+            />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="99dp"
+            android:layout_marginEnd="30dp"
+            android:text="Thank you for visiting KK Home Needs, We hope you enjoy your shopping experience with us."
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="49dp"
+            android:layout_marginTop="165dp"
+            android:text="Sign In"
+            android:background="@drawable/button_corner"
+            />
+
+    </RelativeLayout>
 </RelativeLayout>
