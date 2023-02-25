@@ -20,22 +20,6 @@ public class splashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         Handler handler = new Handler();
 
-        logo=findViewById(R.id.logo);
-        eclippse1=findViewById(R.id.downe);
-        eclippse2=findViewById(R.id.upe);
-
-        bounce = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bounce);
-
-
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                logo.startAnimation(bounce);
-                eclippse2.startAnimation(bounce);
-                eclippse1.startAnimation(bounce);
-            }
-        }, 1000);
-
         Intent secondActivityIntent = new Intent(this, MainActivity.class);
         startActivity(secondActivityIntent);
 
