@@ -38,7 +38,7 @@
             android:layout_marginTop="30dp"
             android:text="Welcome"
             android:textSize="34dp"
-            android:fontFamily="@font/poppins_bold"
+            android:fontFamily="@font/poppins_semibold"
             />
 
         <TextView
@@ -51,6 +51,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="99dp"
             android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="Thank you for visiting KK Home Needs, We hope you enjoy your shopping experience with us."
             android:textSize="14dp" />
 
@@ -61,10 +62,9 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="45dp"
-            android:layout_marginTop="165dp"
-            android:text="Sign In"
-            android:background="@drawable/button_corner"
-            />
+            android:layout_marginTop="170dp"
+            android:backgroundTint="@color/black"
+            android:text="Sign In" />
 
         <Button
             android:id="@+id/signup"
@@ -72,9 +72,9 @@
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="164dp"
+            android:layout_marginTop="170dp"
             android:layout_marginEnd="45dp"
-            android:background="@drawable/button_corner"
+            android:backgroundTint="#F6F2C5"
             android:text="Sign Up"
             android:textColor="@color/black" />
 

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/BackButton1"
+    android:background="#FFC324"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="0dp"
+    tools:context=".SignInActivity">
+
+
+
+    <ImageButton
+        android:id="@+id/BackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/transparent"
+        app:srcCompat="@drawable/material_symbols_arrow_back_sharp" />
+
+    <TextView
+        android:id="@+id/SInActivity"
+        android:layout_width="95dp"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Sign In"
+        android:textSize="26dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="115dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="15dp"
+        android:text="Welcome and Happy Shopping" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="461dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/signinrectangle">
+
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/username_signin"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="14dp"
+            android:text="Username"
+            android:textColor="#6A6A6A"
+            android:padding="18dp"
+            />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextTextPersonName2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:ems="10"
+            android:padding="18dp"
+            android:inputType="textPersonName"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="14dp"
+            android:textColor="#6A6A6A"
+            android:background="@drawable/username_signin"
+            android:text="Password" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextTextPersonName3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="38dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Forgot Password ?"
+            android:textColor="#6A6A6A"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="144dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="147dp"
+            android:layout_marginTop="237dp"
+            android:background="@drawable/button_corner"
+            android:text="Sign Up"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
