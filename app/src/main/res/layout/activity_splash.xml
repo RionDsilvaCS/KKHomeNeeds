@@ -29,7 +29,7 @@
         >
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -38,11 +38,12 @@
             android:layout_marginTop="30dp"
             android:text="Welcome"
             android:textSize="34dp"
-            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_bold"
             />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -51,7 +52,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="99dp"
             android:layout_marginEnd="30dp"
-            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/black"
             android:text="Thank you for visiting KK Home Needs, We hope you enjoy your shopping experience with us."
             android:textSize="14dp" />
 
@@ -62,9 +63,12 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="45dp"
-            android:layout_marginTop="170dp"
-            android:backgroundTint="@color/black"
-            android:text="Sign In" />
+            android:layout_marginTop="165dp"
+            android:text="Sign In"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:background="@drawable/button_corner"
+            />
 
         <Button
             android:id="@+id/signup"
@@ -72,10 +76,11 @@
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="164dp"
             android:layout_marginEnd="45dp"
-            android:backgroundTint="#F6F2C5"
+            android:background="@drawable/button_corner"
             android:text="Sign Up"
+            android:textAllCaps="false"
             android:textColor="@color/black" />
 
     </RelativeLayout>

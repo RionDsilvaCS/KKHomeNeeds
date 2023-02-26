@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.os.Handler;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
 
@@ -22,21 +23,30 @@ public class splashActivity extends AppCompatActivity {
     RelativeLayout main;
     Button signIn, signUp;
     LottieAnimationView anim1;
+    Animation slideUp, fadeIn;
+    TextView wel,text;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         Intent secondActivityIntent = new Intent(this, MainActivity.class);
         Handler handler = new Handler();
+        slideUp = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slideup);
+        fadeIn = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
 
         logo = findViewById(R.id.logo);
         main = findViewById(R.id.welcome_page);
         signIn = findViewById(R.id.signin);
         signUp = findViewById(R.id.signup);
         anim1 = findViewById(R.id.video);
+        wel = findViewById(R.id.welcome);
+        text = findViewById(R.id.text);
 
         logo.setVisibility(View.INVISIBLE);
         main.setVisibility(View.INVISIBLE);
+
+        signUp.setBackgroundColor(signUp.getContext().getResources().getColor(R.color.white));
 
 
         handler.postDelayed(new Runnable() {
@@ -45,7 +55,11 @@ public class splashActivity extends AppCompatActivity {
                 anim1.setVisibility(View.INVISIBLE);
                 logo.setVisibility(View.VISIBLE);
                 main.setVisibility(View.VISIBLE);
-
+                main.startAnimation(slideUp);
+                wel.startAnimation(fadeIn);
+                text.startAnimation(fadeIn);
+                signIn.startAnimation(fadeIn);
+                signUp.startAnimation(fadeIn);
             }
         }, 6000);
 
