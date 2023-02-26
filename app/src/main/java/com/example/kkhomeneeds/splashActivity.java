@@ -30,7 +30,8 @@ public class splashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        Intent secondActivityIntent = new Intent(this, MainActivity.class);
+        Intent signInIntent = new Intent(this, SignInActivity.class);
+        Intent signUpIntent = new Intent(this, SignUpActivity.class);
         Handler handler = new Handler();
         slideUp = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slideup);
         fadeIn = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
@@ -46,7 +47,7 @@ public class splashActivity extends AppCompatActivity {
         logo.setVisibility(View.INVISIBLE);
         main.setVisibility(View.INVISIBLE);
 
-        signUp.setBackgroundColor(signUp.getContext().getResources().getColor(R.color.white));
+
 
 
         handler.postDelayed(new Runnable() {
@@ -66,14 +67,14 @@ public class splashActivity extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(secondActivityIntent);
+                startActivity(signUpIntent);
             }
         });
 
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(secondActivityIntent);
+                startActivity(signInIntent);
             }
         });
 
