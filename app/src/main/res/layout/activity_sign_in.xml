@@ -46,6 +46,7 @@
         android:layout_marginTop="115dp"
         android:fontFamily="@font/poppins_regular"
         android:textSize="15dp"
+        android:textColor="@color/black"
         android:text="Welcome and Happy Shopping" />
 
     <RelativeLayout
@@ -118,9 +119,9 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="48dp"
             android:layout_marginEnd="30dp"
-            android:background="@drawable/button_corner"
+            android:backgroundTint="#020202"
             android:text="Sign Up"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
         <ImageView
             android:id="@+id/imageView5"
