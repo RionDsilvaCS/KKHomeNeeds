@@ -133,6 +133,7 @@
     </LinearLayout>
 
     <ScrollView
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/menu"
@@ -141,9 +142,10 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
             <HorizontalScrollView
+                android:id="@+id/top_category"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:scrollbars="none">
@@ -321,7 +323,40 @@
 
             </HorizontalScrollView>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_advertisement"
+                android:scrollbars="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rocket Deals"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_products"
+                android:scrollbars="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"/>
+
         </LinearLayout>
+
+
+
+
 
     </ScrollView>
 
