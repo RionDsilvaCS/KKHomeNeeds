@@ -23,7 +23,7 @@
         app:srcCompat="@drawable/material_symbols_arrow_back_sharp" />
 
     <TextView
-        android:id="@+id/SInActivity"
+        android:id="@+id/SUpActivity"
         android:layout_width="95dp"
         android:layout_height="38dp"
         android:layout_alignParentStart="true"
@@ -110,7 +110,7 @@
             android:textSize="12dp" />
 
         <Button
-            android:id="@+id/signup"
+            android:id="@+id/signin"
             android:layout_width="144dp"
             android:layout_height="50dp"
             android:layout_below="@+id/editTextTextPersonName3"
@@ -120,14 +120,14 @@
             android:layout_marginTop="48dp"
             android:layout_marginEnd="30dp"
             android:backgroundTint="#020202"
-            android:text="Sign Up"
+            android:text="Sign In"
             android:textColor="@color/white" />
 
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/signup"
+            android:layout_below="@+id/signin"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="58dp"
