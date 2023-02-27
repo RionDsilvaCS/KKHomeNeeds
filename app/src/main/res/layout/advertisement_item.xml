@@ -3,18 +3,26 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:id="@+id/cardview"
-    android:layout_height="220dp"
     card_view:cardBackgroundColor="#FFFFFF"
-    app:ignore="NamespaceTypo">
+    app:ignore="NamespaceTypo"
+    >
 
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:layout_margin="20dp"
-        app:srcCompat="@drawable/car_advertisement"
-        android:cropToPadding="true"
-        android:scaleType="centerCrop"/>
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/advertise_img"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:srcCompat="@drawable/car_advertisement"
+            android:cropToPadding="true"
+            android:scaleType="centerCrop"/>
+    </LinearLayout>
+
 
 
 </androidx.cardview.widget.CardView>
