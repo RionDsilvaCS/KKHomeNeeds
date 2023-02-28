@@ -10,19 +10,38 @@ import java.util.ArrayList;
 
 public class SearchResultActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerViewAd, recyclerViewOffer;
-    ArrayList<Integer> array_image_ad,array_image_deal;
+    private RecyclerView recyclerViewOffer;
+    ArrayList<Integer> array_image_deal;
     ArrayList<String> array_name,array_category,array_price,array_offer;
 
-    RecyclerView.LayoutManager RecyclerViewLayoutManager,RecyclerViewLayoutManager2;
+    RecyclerView.LayoutManager RecyclerViewLayoutManager2;
     dealsAdapter dealsadapter;
-    LinearLayoutManager HorizontalLayout,HorizontalLayout2;
-    int adItem_id, offerItem_id;
+    LinearLayoutManager HorizontalLayout2;
+    int offerItem_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_result);
+
+        recyclerViewOffer = findViewById(R.id.recyclerview_products1);
+
+        RecyclerViewLayoutManager2 = new LinearLayoutManager(getApplicationContext());
+
+
+        offerItem_id = R.layout.activity_search_result;
+        recyclerViewOffer.setLayoutManager(RecyclerViewLayoutManager2);
+
+        AddItemsToRecyclerViewArrayList();
+
+
+        dealsadapter = new dealsAdapter(array_image_deal,array_name,array_category,array_price,array_offer, offerItem_id);
+
+        HorizontalLayout2 = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
+
+        recyclerViewOffer.setLayoutManager(HorizontalLayout2);
+
+        recyclerViewOffer.setAdapter(dealsadapter);
     }
 
     public void AddItemsToRecyclerViewArrayList() {

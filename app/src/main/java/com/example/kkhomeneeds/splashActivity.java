@@ -31,7 +31,7 @@ public class splashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         Intent signInIntent = new Intent(this, SignInActivity.class);
-        Intent signUpIntent = new Intent(this, SignUpActivity.class);
+        Intent signUpIntent = new Intent(this, SearchResultActivity.class);
         Intent secondIntent = new Intent(this, MainActivity.class);
         Handler handler = new Handler();
         slideUp = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slideup);
@@ -68,7 +68,7 @@ public class splashActivity extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(secondIntent);
+                startActivity(signUpIntent);
             }
         });
 

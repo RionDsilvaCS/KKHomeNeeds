@@ -8,13 +8,29 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+    ImageView searchButton,rImage;
+
+
+
     private RecyclerView recyclerViewAd, recyclerViewOffer;
     ArrayList<Integer> array_image_ad,array_image_deal;
     ArrayList<String> array_name,array_category,array_price,array_offer;
@@ -29,6 +45,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Intent searchIntent = new Intent(this, SearchResultActivity.class);
+        searchButton = findViewById(R.id.search_icon);
+        rImage = findViewById(R.id.rimage);
+
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(searchIntent);
+            }
+        });
+
+
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+
+        DatabaseReference databaseReference = firebaseDatabase.getReference();
+
+        DatabaseReference getImage = databaseReference.child("Image1");
+
+
+
+
 
         recyclerViewAd = findViewById(R.id.recyclerview_advertisement);
         recyclerViewOffer = findViewById(R.id.recyclerview_products);
@@ -54,6 +91,25 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerViewAd.setAdapter(advertisementadapter);
         recyclerViewOffer.setAdapter(dealsadapter);
+
+
+
+        getImage.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(
+                            @NonNull DataSnapshot dataSnapshot) {
+
+                        String link = dataSnapshot.getValue(String.class);
+                        Picasso.get().load(link).into(rImage);
+                    }
+                    public void onCancelled(
+                            @NonNull DatabaseError databaseError) {
+                        Toast.makeText(MainActivity.this,
+                                        "Error Loading Image",
+                                        Toast.LENGTH_SHORT)
+                                .show();
+                    }
+                });
 
     }
     public void AddItemsToRecyclerViewArrayList() {
