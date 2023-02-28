@@ -114,7 +114,8 @@
                 android:inputType="textPersonName"
                 android:paddingLeft="12dp"
                 android:paddingRight="48dp"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -150,17 +151,15 @@
                 android:layout_height="100dp"
                 android:scrollbars="none">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="56dp"
-                    android:layout_height="82dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp">
+
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="82dp"
                         android:orientation="horizontal"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
                         >
 
                         <LinearLayout
@@ -168,7 +167,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:layout_marginRight="24dp">
+                            android:layout_marginRight="24dp"
+                            >
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -181,6 +181,7 @@
                                 android:layout_marginTop="8dp"
                                 android:text="Fans"
                                 android:textAlignment="center"
+                                android:textColor="@color/black"
                                 />
                         </LinearLayout>
 
@@ -204,6 +205,7 @@
                                 android:layout_marginTop="8dp"
                                 android:text="Fans"
                                 android:textAlignment="center"
+                                android:textColor="@color/black"
                                 />
                         </LinearLayout>
 
@@ -227,6 +229,7 @@
                                 android:layout_marginTop="8dp"
                                 android:text="Fans"
                                 android:textAlignment="center"
+                                android:textColor="@color/black"
                                 />
                         </LinearLayout>
 
@@ -249,6 +252,7 @@
                                 android:layout_marginTop="8dp"
                                 android:text="Fans"
                                 android:textAlignment="center"
+                                android:textColor="@color/black"
                                 />
                         </LinearLayout>
 
@@ -271,6 +275,7 @@
                                 android:layout_marginTop="8dp"
                                 android:text="Fans"
                                 android:textAlignment="center"
+                                android:textColor="@color/black"
                                 />
                         </LinearLayout>
 
@@ -293,6 +298,7 @@
                                 android:layout_marginTop="8dp"
                                 android:text="Fans"
                                 android:textAlignment="center"
+                                android:textColor="@color/black"
                                 />
                         </LinearLayout>
 
@@ -315,23 +321,25 @@
                                 android:layout_marginTop="8dp"
                                 android:text="Fans"
                                 android:textAlignment="center"
+                                android:textColor="@color/black"
                                 />
                         </LinearLayout>
 
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+
             </HorizontalScrollView>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview_advertisement"
                 android:scrollbars="none"
                 android:layout_width="match_parent"
-                android:layout_height="220dp"
+                android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
-                android:padding="20dp"
+                android:layout_marginTop="12dp"
+                android:padding="0dp"
                  />
 
             <TextView
@@ -346,13 +354,24 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview_products"
-                android:scrollbars="horizontal"
+                android:scrollbars="none"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="24dp"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recently visited"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"/>
 
         </LinearLayout>
 

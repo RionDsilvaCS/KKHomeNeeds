@@ -15,7 +15,7 @@ import android.widget.Button;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private RecyclerView recyclerViewAd,recyclerViewOffer;
+    private RecyclerView recyclerViewAd, recyclerViewOffer;
     ArrayList<Integer> array_image_ad,array_image_deal;
     ArrayList<String> array_name,array_category,array_price,array_offer;
 
