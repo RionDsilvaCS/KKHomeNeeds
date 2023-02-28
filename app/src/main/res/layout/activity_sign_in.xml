@@ -51,7 +51,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="461dp"
+        android:layout_height="520dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
         android:background="@drawable/signinrectangle">
@@ -72,7 +72,7 @@
             android:inputType="textPersonName"
             android:fontFamily="@font/poppins_semibold"
             android:textSize="14dp"
-            android:text="Username"
+            android:hint="Username"
             android:textColor="#6A6A6A"
             android:padding="18dp"
             />
@@ -94,7 +94,7 @@
             android:textSize="14dp"
             android:textColor="#6A6A6A"
             android:background="@drawable/username_signin"
-            android:text="Password" />
+            android:hint="Password"/>
 
         <TextView
             android:id="@+id/textView"
@@ -131,9 +131,29 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="58dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="98dp"
             android:layout_marginEnd="59dp"
             app:srcCompat="@drawable/splash_logo" />
+        <ProgressBar
+            android:id="@+id/Progress"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/registerNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signin"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="145dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Click to SignUp"
+            android:textSize="16dp" />
     </RelativeLayout>
 
 </RelativeLayout>

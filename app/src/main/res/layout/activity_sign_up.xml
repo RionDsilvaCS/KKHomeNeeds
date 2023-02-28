@@ -47,13 +47,13 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="498dp"
+        android:layout_height="570dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
         android:background="@drawable/signinrectangle">
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/emailid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -72,10 +72,10 @@
             android:textSize="14dp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/pass_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/editTextTextPersonName2"
+            android:layout_below="@+id/emailid"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="30dp"
@@ -93,7 +93,7 @@
             android:id="@+id/editTextTextPersonName4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/editTextTextPersonName3"
+            android:layout_below="@+id/pass_id"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="30dp"
@@ -132,6 +132,11 @@
             android:background="@drawable/button_corner"
             android:text="Sign Up"
             android:textColor="@color/white" />
+        <ProgressBar
+            android:id="@+id/Progress"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
         <ImageView
             android:id="@+id/imageView5"
@@ -142,10 +147,25 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="58dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="59dp"
-            android:layout_marginBottom="25dp"
-            app:srcCompat="@drawable/splash_logo" />
+            android:layout_marginTop="51dp"
+            android:layout_marginEnd="58dp"
+            android:layout_marginBottom="-1dp"
+            app:srcCompat="@drawable/splash_logo"/>
+
+        <TextView
+            android:id="@+id/loginNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="144dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Click to SignIn"
+            android:textSize="16dp" />
     </RelativeLayout>
 
     </RelativeLayout>
