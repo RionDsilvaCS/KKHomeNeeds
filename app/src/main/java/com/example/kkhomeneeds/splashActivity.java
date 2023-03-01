@@ -68,14 +68,14 @@ public class splashActivity extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(signUpIntent);
+                startActivity(secondIntent);
             }
         });
 
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(secondIntent);
+                startActivity(signInIntent);
             }
         });
 
